@@ -1,0 +1,78 @@
+/* Grid Container */
+#container {
+  position: absolute;
+  right: 680px;
+  top: 200px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 180px 180px 180px;
+  grid-template-rows: 180px 180px 180px;
+  padding: 10px;
+  text-align: center;
+}
+.grid-item {
+  border: 0.5px solid rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  font-size: 32pt;
+  text-align: center;
+}
+/* Grid Container */
+
+#reset-btn {
+  background-color: skyblue;
+  border-radius: 1.6rem;
+  border-color: transparent;
+  padding: 10px 50px;
+  color: black;
+  position: absolute;
+  bottom: 120px;
+  right: 880px;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 14pt;
+
+}
+
+/* X & O Divs */
+#X {
+  position: absolute;
+  font-weight: bold;
+  width: 200px;
+  top: 400px;
+  left: 300px;
+  font-size: 30pt;
+  font-family: monospace;
+  transition: 0.5 all ease-in-out;
+}
+
+#O {
+  position: absolute;
+  font-weight: bold;
+  width: 200px;
+  top: 403px;
+  right: 200px;
+  font-size: 24pt;
+  font-family: monospace;
+  transition: 0.5 all ease-in-out;
+
+}
+/* X & O Divs */
+
+#tie {
+  position: absolute;
+  right: 730px;
+  top: 400px;
+  font-weight: bold;
+  font-size: 36pt;
+  font-family: monospace;
+}
+
+#won {
+  position: absolute;
+  right: 870px;
+  top: 400px;
+  font-weight: bold;
+  font-size: 36pt;
+  font-family: monospace;
+}

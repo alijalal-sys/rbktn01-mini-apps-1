@@ -8,6 +8,19 @@ var ODiv = document.getElementById('O');
 var blocks = document.getElementsByClassName('blocks');
 var reset = document.getElementById('reset-btn');
 
+XDiv.style.fontSize = '30pt'
+
+
+// Something got clicked !
+// put X and set it to false so the next time he won't play again !
+// It's O turn
+
+// first 'X' play
+// we need to target the id's for divs
+// onClick => put 'X' inside the div that he click on
+// invoke these methods ==> hasRowOrColConflict && hasMajorOrMinorConflict
+// if return true => Do something He Won! Woohoo
+// otherwise pass the turn to 'O' player
 
 var square1 = document.getElementById('1');
 square1.addEventListener("click", function () {
@@ -249,6 +262,10 @@ reset.addEventListener('click', () => {
   }
 })
 
+
+// function will be invoked after 'X' play or 'O'
+// check if it has row || col conflict 
+// return boolean
 
 // Helper Functions
 

@@ -186,8 +186,13 @@ var isTie = function () {
 var heWon = function (player) {
   document.getElementById('main').style.opacity = 0.2;
   document.getElementById('won').style.visibility = 'visible';
+  document.getElementById('play').style.visibility = 'visible';
   document.getElementById('won').innerHTML = `<p>${player} Won!</p>`
 }
+
+document.getElementById('play-again').addEventListener('click', () => {
+  alert('no');
+})
 
 // Switch players
 var switchPlayer = function (player) {
@@ -195,14 +200,14 @@ var switchPlayer = function (player) {
     XPlayer = false;
     OPlayer = true;
     counter++;
-    XDiv.style.fontSize = '24pt'
-    ODiv.style.fontSize = '30pt'
+    XDiv.style.fontSize = '24pt';
+    ODiv.style.fontSize = '36pt';
   } else {
     OPlayer = false;
     XPlayer = true;
     counter++;
-    ODiv.style.fontSize = '24pt'
-    XDiv.style.fontSize = '30pt'
+    ODiv.style.fontSize = '24pt';
+    XDiv.style.fontSize = '36pt';
   }
 }
 

@@ -1,6 +1,4 @@
-// Alternate between 'X' 'O'
-// var boolean for X and O
-var XPlayer = true; // because he starts first
+var XPlayer = true; 
 var OPlayer = false;
 var counter = 0;
 var XDiv = document.getElementById('X');
@@ -9,32 +7,17 @@ var blocks = document.getElementsByClassName('blocks');
 var reset = document.getElementById('reset-btn');
 
 
+
 var square1 = document.getElementById('1');
 square1.addEventListener("click", function () {
   if (square1.textContent === '') {
     if (XPlayer) {
       square1.innerText = 'X';
-
-      switchPlayer('X');
-
-      if (hasRowOrColConflict('X') || hasMajorOrMinorConflict('X')) {
-        return heWon('X')
-      }
-
-      isTie()
+      playGame('X')
     } else {
       square1.innerText = 'O';
-
-      switchPlayer('O');
-      
-      if (hasRowOrColConflict('O') || hasMajorOrMinorConflict('O')) {
-        return heWon('O')
-      }
-
-      isTie()
+      playGame('O')
     }
-  } else {
-    console.log('Noo')
   }
 });
 
@@ -43,49 +26,25 @@ square2.addEventListener("click", function () {
   if (square2.textContent === '') {
     if (XPlayer) {
       square2.innerText = 'X';
-
-      switchPlayer('X');
-      if (hasRowOrColConflict('X') || hasMajorOrMinorConflict('X')) {
-        return heWon('X')
-      }
-
-      isTie()
+      playGame('X')
     } else {
       square2.innerText = 'O';
-
-      switchPlayer('O');
-      if (hasRowOrColConflict('O') || hasMajorOrMinorConflict('O')) {
-        return heWon('O')
-      }
-      isTie()
+      playGame('O')
     }
-  } else {
-    console.log('Noo')
-  }});
+  }
+});
 
 var square3 = document.getElementById('3');
 square3.addEventListener("click", function () {
   if (square3.textContent === '') {
     if (XPlayer) {
       square3.innerText = 'X';
-      
-      switchPlayer('X');
-      if (hasRowOrColConflict('X') || hasMajorOrMinorConflict('X')) {
-        return heWon('X')
-      }
-      
-      isTie()
+      playGame('X')
+
     } else {
       square3.innerText = 'O';
-
-      switchPlayer('O');
-      if (hasRowOrColConflict('O') || hasMajorOrMinorConflict('O')) {
-        return heWon('O')
-      }
-      isTie()
+      playGame('O')
     }
-  } else {
-    console.log('Noo')
   }
 });
 
@@ -94,25 +53,11 @@ square4.addEventListener("click", function () {
   if (square4.textContent === '') {
     if (XPlayer) {
       square4.innerText = 'X';
-
-      
-      switchPlayer('X');
-      if (hasRowOrColConflict('X') || hasMajorOrMinorConflict('X')) {
-        return heWon('X')
-      }
-      isTie()
+      playGame('X')
     } else {
       square4.innerText = 'O';
-
-      
-      switchPlayer('O');
-      if (hasRowOrColConflict('O') || hasMajorOrMinorConflict('O')) {
-        return heWon('O')
-      }
-      isTie()
+      playGame('O')
     }
-  } else {
-    console.log('Noo')
   }
 });
 
@@ -121,23 +66,11 @@ square5.addEventListener("click", function () {
   if (square5.textContent === '') {
     if (XPlayer) {
       square5.innerText = 'X';
-      
-      switchPlayer('X');
-      if (hasRowOrColConflict('X') || hasMajorOrMinorConflict('X')) {
-        return heWon('X')
-      }
-      isTie()
+      playGame('X')
     } else {
       square5.innerText = 'O';
-      
-      switchPlayer('O');
-      if (hasRowOrColConflict('O') || hasMajorOrMinorConflict('O')) {
-        return heWon('O')
-      }
-      isTie()
+      playGame('O')
     }
-  } else {
-    console.log('Noo')
   }
 });
 
@@ -146,47 +79,24 @@ square6.addEventListener("click", function () {
   if (square6.textContent === '') {
     if (XPlayer) {
       square6.innerText = 'X';
-      
-      switchPlayer('X');
-      if (hasRowOrColConflict('X') || hasMajorOrMinorConflict('X')) {
-        return heWon('X')
-      }
-      isTie()
+      playGame('X')
     } else {
       square6.innerText = 'O';
-      
-      switchPlayer('O');
-      if (hasRowOrColConflict('O') || hasMajorOrMinorConflict('O')) {
-        return heWon('O')
-      }
-      isTie()
+      playGame('O')
     }
-  } else {
-    console.log('Noo')
-  }});
+  }
+});
 
 var square7 = document.getElementById('7');
 square7.addEventListener("click", function () {
   if (square7.textContent === '') {
     if (XPlayer) {
       square7.innerText = 'X';
-      
-      switchPlayer('X');
-      if (hasRowOrColConflict('X') || hasMajorOrMinorConflict('X')) {
-        return heWon('X')
-      }
-      isTie()
+      playGame('X')
     } else {
       square7.innerText = 'O';
-      
-      switchPlayer('O');
-      if (hasRowOrColConflict('O') || hasMajorOrMinorConflict('O')) {
-        return heWon('O')
-      }
-      isTie()
+      playGame('O')
     }
-  } else {
-    console.log('Noo')
   }
 });
 
@@ -195,23 +105,11 @@ square8.addEventListener("click", function () {
   if (square8.textContent === '') {
     if (XPlayer) {
       square8.innerText = 'X';
-      
-      switchPlayer('X');
-      if (hasRowOrColConflict('X') || hasMajorOrMinorConflict('X')) {
-        return heWon('X')
-      }
-      isTie()
+      playGame('X')
     } else {
       square8.innerText = 'O';
-      
-      switchPlayer('O');
-      if (hasRowOrColConflict('O') || hasMajorOrMinorConflict('O')) {
-        return heWon('O')
-      }
-      isTie()
+      playGame('O')
     }
-  } else {
-    console.log('Noo')
   }
 });
 
@@ -220,23 +118,11 @@ square9.addEventListener("click", function () {
   if (square9.textContent === '') {
     if (XPlayer) {
       square9.innerText = 'X';
-
-      switchPlayer('X');
-      if (hasRowOrColConflict('X') || hasMajorOrMinorConflict('X')) {
-        return heWon('X')
-      }
-      isTie()
+      playGame('X')
     } else {
       square9.innerText = 'O';
-
-      switchPlayer('X');
-      if (hasRowOrColConflict('O') || hasMajorOrMinorConflict('O')) {
-        return heWon('O')
-      }
-      isTie()
+      playGame('O')
     }
-  } else {
-    console.log('Noo')
   }
 });
 
@@ -282,7 +168,6 @@ var hasRowOrColConflict = function (play) {
 var hasMajorOrMinorConflict = function (play) {
   if (blocks[0].textContent === play && blocks[4].textContent === play && blocks[8].textContent === play) {
     return true;
-
   }
   if (blocks[2].textContent === play && blocks[4].textContent === play && blocks[6].textContent === play) {
     return true;
@@ -319,4 +204,15 @@ var switchPlayer = function (player) {
     ODiv.style.fontSize = '24pt'
     XDiv.style.fontSize = '30pt'
   }
+}
+
+// Play Game 
+var playGame = function (player) {
+  switchPlayer(player);
+  
+  if (hasRowOrColConflict(player) || hasMajorOrMinorConflict(player)) {
+    return heWon(player)
+  }
+
+  isTie()
 }

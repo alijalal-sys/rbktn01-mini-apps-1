@@ -22,3 +22,13 @@ if (hasMajorOrMinorConflict('O')) {
   console.log('O WON')
   return;
 }
+
+var playGame = function (player) {
+  switchPlayer(player);
+  
+  if (hasRowOrColConflict(player) || hasMajorOrMinorConflict(player)) {
+    return heWon(player)
+  }
+
+  isTie()
+}

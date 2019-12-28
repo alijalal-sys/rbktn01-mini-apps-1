@@ -32,3 +32,51 @@ var playGame = function (player) {
 
   isTie()
 }
+
+
+
+for (var i = 0; i < blocks.length; i++) {
+  blocks[i].addEventListener("click", function () {
+    if (blocks[i].textContent === '') {
+      if (XPlayer) {
+        blocks[i].innerText = 'X';
+        playGame('X')
+      } else {
+        blocks[i].innerText = 'O';
+        playGame('O')
+      }
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
